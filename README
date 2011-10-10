@@ -1,0 +1,46 @@
+How this theme haas been created: 
+================================
+
+1. Add custom theme files
+-------------------------
+Create custom index.theme and constants.init based on meegotouch-theme
+so it could be parsed by fremantle qt-components
+
+2. Fetch blanco theme content list
+-----------------------------------
+On QtSimulator directory invoke:
+
+# fetch.py idx.txt harmattanthemes
+
+This generates a file with a list of current images, where are
+located, type and dimmensions. copy idx.txt file to base directory
+
+3. Remove spurious images
+--------------------------
+On qt-components-base-icons remove duplicates:
+
+# cd icons && rm -rf png theme
+
+4. Merge available image
+-------------------------       
+on base directory invoke:
+
+# merge.py idx.txt merge.txt /path/to/qt-components-base-icons
+   /path/to/meegotouch-theme-graphics /path/to/meegotouch-theme
+
+this command merge images. In case that multiple source provide same
+images, it gives priority to the first one found. declaration order is
+important
+
+meegotouch-theme used commit is c5c2004cf4d66ca0ab077e349699c1c736180eca
+
+5. Verify that there's no copyright theme
+-----------------------------------------
+# verify.py base /path/to/qt-components-base-icons
+   /path/to/meegotouch-theme-graphics /path/to/meegotouch-theme
+
+6. AutoGenerate missing images
+-------------------------------
+From base directory invoke:
+    # generate.py idx.txt
+
