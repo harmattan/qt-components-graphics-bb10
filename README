@@ -41,6 +41,5 @@ meegotouch-theme used commit is c5c2004cf4d66ca0ab077e349699c1c736180eca
 
 6. AutoGenerate missing images
 -------------------------------
-From base directory invoke:
-    # generate.py idx.txt
+# generate.py idx.txt generated.txt /base
 
