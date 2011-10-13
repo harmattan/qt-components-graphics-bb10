@@ -24,7 +24,14 @@ base.files = ./base
 base.path = $$THEME_DIR
 base.CONFIG += no_check_exist
 
+# BLANCO THEME
+blanco.files = ./blanco
+blanco.path = $$THEME_DIR
+blanco.CONFIG += no_check_exist
+
 INSTALLS += base \
+            blanco \
+
 
 QMAKE_CLEAN += build-stamp configure-stamp
 QMAKE_DISTCLEAN += build-stamp configure-stamp
