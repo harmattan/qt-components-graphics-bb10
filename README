@@ -8,9 +8,9 @@ so it could be parsed by fremantle qt-components
 
 2. Fetch blanco theme content list
 -----------------------------------
-On QtSimulator directory invoke:
+On QtSimulator's harmattanthemes directory invoke:
 
-# fetch.py idx.txt harmattanthemes
+# fetch.py idx.txt blanco
 
 This generates a file with a list of current images, where are
 located, type and dimmensions. copy idx.txt file to base directory

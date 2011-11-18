@@ -61,12 +61,12 @@ if __name__ == '__main__':
                 except:
                     pass
                 copy(values[0][3], destination)
-                dest.write(",".join(theme[key][0:4]) + "," + " => " + ",".join(values[0][0:3]) + "," + values[0][4] + "\n")
+                dest.write(",".join(theme[key][0:4]) + "," + " => " + ",".join(values[0][0:4]) + "\n")
 
                 if len(values) > 1:
                     dups.write(",".join(theme[key][0:4]))
-                    for values in values[1:]:
-                        dups.write(" => " +  ",".join(values[0:3]) + "," + values[4] + "\n")
+                    for value in values[1:]:
+                        dups.write(" => " +  ",".join(value[0:4]))
                     dups.write("\n")
 
     print "added:   " + str(int(((len(candidates) - len(ignored)) * 100) / len(theme))) + "% (" + str(len(candidates) - len(ignored)) + ")"
