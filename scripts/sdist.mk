@@ -3,7 +3,7 @@
 # (C) 2011 Carlos Martín
 
 PACKAGE := qt-components-themes
-VERSION := 0.1.91
+VERSION := 0.1.92
 
 sdist:
 	git archive --format=tar --prefix=$(PACKAGE)-$(VERSION)/ HEAD \
