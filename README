@@ -1,3 +1,24 @@
+BB10 Qt Components
+==================
+Theme for the BB10 Qt Components port, located at:
+https://gitorious.org/~martink/qt-components/martinks-ineans-qt-components
+
+What was changed
+================
+- high-DPI constants (are they even used ?)
+- upscaled switch & main toolbar backgrounds
+
+Making the theme smaller
+========================
+The whole theme has about 20 MB and contains thousands of files. BB10 applications currently have to bundle
+all external resources. Fortunatelly, the theme can be cut down to only the stuff needed by the application.
+- remove the *.idx files
+- remove all icons that are not needed by you applications from the images folder
+- remove all folders other than "theme" from the "meegotouch" folder
+- in the meegotouch/theme folder, leave only the "basement" folder
+- you can also by trial and error rumove further stuff, such as inverted versions of icons if you are suing the light theme
+- if you remove some graphics that is needed by mistake, check the log for error message, they show what image is missing
+
 How this theme haas been created: 
 ================================
 
